@@ -1,4 +1,8 @@
 /*definições gerais*/
+html{
+    overflow-y: hidden;
+}
+
 * {
     padding: 0;
     margin: 0;
@@ -82,7 +86,7 @@ body {
     list-style: none;
 }
 
-.esquerda ul li a {
+.card {
     /*Local ods elementos*/
     display: flex;
     flex-direction: column;
@@ -101,9 +105,13 @@ body {
     color: aliceblue;
     text-decoration: none;
     font-size: 50px;
-    text-shadow: 1px 1px 2px #000, -1px -1px 2px #000, 1px -1px 2px #000, -1px 1px 2px #000;
     /*transition*/
     transition: 0.3s linear;
+}
+
+.card h4{
+    font-size: 50px;
+    text-shadow: 1px 1px 2px #000, -1px -1px 2px #000, 1px -1px 2px #000, -1px 1px 2px #000;
 }
 
 .card img{
@@ -127,7 +135,57 @@ body {
     justify-content: end;
 }
 
-img {
+.direita img {
     max-height: 100vh;
     justify-content: flex-end;
+}
+
+@media (max-width: 1280px){
+    #social{
+        gap: 1rem;
+        top: 1rem;
+        left: 1rem;
+    }
+    #social a{
+        font-size: 4rem;
+    }
+    .texto h2{
+        font-size: 2.7rem;
+    }
+    .p1{
+        font-size: 2.3rem;
+    }
+    .p2{
+        font-size: 1rem;
+    }
+    #container{
+        grid-template-columns: 65% 35%;
+    }
+    .esquerda{
+        padding-left: 2rem;
+        padding-top: .5rem;
+    }
+    .esquerda ul{
+        margin-top: 9rem;
+        gap: 1.36em;
+    }
+    .card{
+        font-size: 3rem;
+        padding-top: 1rem;
+        width: 4.5em;
+        height: 4.5em;
+    }
+    .card h4{
+        font-size: 0.7em;
+    }
+    .card img{
+        display: block;
+        max-width: 3.9em;
+    }
+    .card p{
+        font-size: 1.3rem;
+    }
+    .direita img{
+        width: auto;
+    }
 }
