@@ -1,0 +1,133 @@
+/*definições gerais*/
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Lobster', cursive;
+}
+
+body {
+    background-image: url(../imagens/background_main.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+/*Github*/
+#social{
+    display: flex;
+    gap: 10px;
+    position: absolute;
+    top: 40px;
+    left: 20px;
+}
+
+#social a{
+    font-size: 70px;
+    color: #000;
+    text-shadow: 1px 1px 2px #fff, -1px -1px 2px #fff, 1px -1px 2px #fff, -1px 1px 2px #fff;
+    transition: 0.3s linear;
+}
+
+#social a:hover{
+    transform: scale(1.1);
+}
+
+/*Texto*/
+.texto {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 0);
+    margin-top: 20px;
+    color: aliceblue;
+    text-align: center;
+    text-shadow: 1px 1px 2px #000, -1px -1px 2px #000, 1px -1px 2px #000, -1px 1px 2px #000;
+}
+
+.texto h2 {
+    font-weight: 700;
+    font-size: 70px;
+}
+
+.p1 {
+    font-size: 40px;
+}
+
+.p2 {
+    font-size: 17px;
+    font-weight: 300;
+    color: darkgray;
+}
+
+/*Container*/
+#container {
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 60% 40%;
+}
+
+/*Esquerda e cards*/
+.esquerda {
+    padding: 20px;
+}
+
+.esquerda ul {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin-top: 200px;
+    gap: 50px;
+}
+
+.esquerda ul li {
+    list-style: none;
+}
+
+.esquerda ul li a {
+    /*Local ods elementos*/
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 40px;
+    /*Cor do card*/
+    background-color: rgba(0, 0, 0, 0.6);
+    box-shadow: 2px 2px 5px #fff, -2px -2px 5px #fff, 2px -2px 5px #fff, -2px 2px 5px #fff;
+    backdrop-filter: blur(5px);
+    /*Tamanho e borda*/
+    width: 340px;
+    height: 320px;
+    border-radius: 50px;
+    /*texto*/
+    color: aliceblue;
+    text-decoration: none;
+    font-size: 50px;
+    text-shadow: 1px 1px 2px #000, -1px -1px 2px #000, 1px -1px 2px #000, -1px 1px 2px #000;
+    /*transition*/
+    transition: 0.3s linear;
+}
+
+.card img{
+    width: 260px;
+    align-self: flex-end;
+    border-bottom-right-radius: 50px;
+}
+
+.card p{
+    font-size: 20px;
+    margin: 20px;
+}
+
+.card:hover{
+    transform: scale(1.1);
+}
+
+/*Direita e imagem*/
+.direita {
+    display: flex;
+    justify-content: end;
+}
+
+img {
+    max-height: 100vh;
+    justify-content: flex-end;
+}
