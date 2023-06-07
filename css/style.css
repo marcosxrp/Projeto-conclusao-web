@@ -91,7 +91,6 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-between;
     padding-top: 40px;
     /*Cor do card*/
     background-color: rgba(0, 0, 0, 0.6);
@@ -107,6 +106,7 @@ body {
     font-size: 50px;
     /*transition*/
     transition: 0.3s linear;
+    position: relative;
 }
 
 .card h4{
@@ -115,14 +115,28 @@ body {
 }
 
 .card img{
+    position: absolute;
+    bottom: 0;
     width: 260px;
     align-self: flex-end;
     border-bottom-right-radius: 50px;
+    scale: 1;
+    transition: transform .4s linear;
+}
+
+.card:hover img{
+    transform: scale(0) translateY(-500px);
 }
 
 .card p{
-    font-size: 20px;
+    font-size: 25px;
     margin: 20px;
+    transition: opacity .5s linear;
+    opacity: 0;
+}
+
+.card:hover p{
+    opacity: 100;
 }
 
 .card:hover{
@@ -140,11 +154,11 @@ body {
     justify-content: flex-end;
 }
 
-@media (max-width: 1280px){
+@media (max-width: 1500px){
     #social{
         gap: 1rem;
         top: 1rem;
-        left: 1rem;
+        left: 2rem;
     }
     #social a{
         font-size: 4rem;
@@ -172,7 +186,7 @@ body {
     .card{
         font-size: 3rem;
         padding-top: 1rem;
-        width: 4.5em;
+        width: 5em;
         height: 4.5em;
     }
     .card h4{
@@ -183,7 +197,8 @@ body {
         max-width: 3.9em;
     }
     .card p{
-        font-size: 1.3rem;
+        margin: 10px;
+        font-size: 1rem;
     }
     .direita img{
         width: auto;
