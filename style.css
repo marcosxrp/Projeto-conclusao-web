@@ -12,7 +12,9 @@ body {
     background-attachment: fixed;
 }
 
-/*Github*/
+/*Inicio da pagina principal*/
+
+/* Redes Sociais main */
 #social{
     display: flex;
     gap: 10px;
@@ -58,8 +60,8 @@ body {
     color: darkgray;
 }
 
-/*Container*/
-#container {
+/*Container main*/
+#container_main {
     height: 100vh;
     display: grid;
     grid-template-columns: 60% 40%;
@@ -149,6 +151,7 @@ body {
     justify-content: flex-end;
 }
 
+/*Media query para responsividade da pagina main*/
 @media (max-width: 1500px){
     #social{
         gap: 1rem;
@@ -202,8 +205,8 @@ body {
 
 /*Fim da pagina principal*/
 
-/*Inicio historia*/
-/*header*/
+/*Definições gerais paginas secundarias*/
+
 header{
     margin: 0 auto;
     display: flex;
@@ -212,9 +215,8 @@ header{
     align-items: center;
     padding: 0 2rem;
     justify-content: space-between;
-    background-color: rgba(0, 0, 0, 0.6);
+    background-color: rgba(0, 0, 0, 0.7);
     border-radius: 0px 0px 30px 30px;
-    
 }
 
 #logo{
@@ -229,7 +231,7 @@ header{
 
 #logo:hover{
     transform: scale(1.1);
-    box-shadow: 1px 1px 2px #fff, -1px -1px 2px #fff, 1px -1px 2px #fff, -1px 1px 2px #fff;
+    box-shadow: 1px 1px 2px aqua, -1px -1px 2px aqua, 1px -1px 2px aqua, -1px 1px 2px aqua;
 }
 
 .pages ul{
@@ -246,6 +248,7 @@ header{
     color: aliceblue;
     text-transform: uppercase;
     padding: 1rem;
+    font-size: 1.5rem;
 }
 
 .pages ul li a:hover{
@@ -258,23 +261,19 @@ main{
     margin-top: 1rem;
     padding: 3rem;
     color: aliceblue;
-    background-color: rgba(0, 0, 0, 0.6);
+    background-color: rgba(0, 0, 0, 0.7);
     border-radius: 30px;
 }
 
-section{
-    display: grid;
+
+.container p{
+    font-weight: 400;
+    font-size: 2em;
+    margin-bottom: 1rem;
+    text-indent: 2rem;
 }
 
-.img-direita{
-    grid-template-columns: minmax(200px, 65%) minmax(500px, 35%);
-}
-
-.img-esquerda{
-    grid-template-columns: minmax(400px, 35%)minmax(200px, 65%);
-}
-
-main section h2{
+h2{
     grid-column: span 2;
     font-size: 5rem;
     font-weight: 700;
@@ -282,34 +281,29 @@ main section h2{
     margin-bottom: 2rem;
 }
 
-main section:not(:nth-child(1)) h2{
-    margin-top: 3rem;
+h3{
+    font-size: 3.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    text-align: center;
 }
 
-main section img{
-    align-self: center;
-    display: block;
-    height: auto;
-    max-width: 100%;
-    padding: 1em;
-    transition: transform .3s linear;
+h4{
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
 }
 
-main section img:hover{
-    transform: translateY(-4rem);
-}
-
-.conteudo p{
-    font-weight: 400;
-    font-size: 1.8em;
-    margin-bottom: 1.3em;
+li{
+    list-style: none;
 }
 
 footer{
+    bottom: 0;
     align-items: center;
     justify-content: center;
     gap: 4rem;
-    background-color: rgba(0, 0, 0, 0.6);
+    background-color: rgba(0, 0, 0, 0.7);
     border-radius: 30px 30px 0px 0px;
     max-width: 1800px;
     margin: 0 auto;
@@ -329,4 +323,60 @@ footer a{
 
 footer a:hover{
     transform: scale(1.1);
+}
+
+/*Inicio historia*/
+.img_direita,
+.img_esquerda{
+    display: grid;
+}
+
+.img_direita{
+    grid-template-columns: minmax(200px, 75%) minmax(400px, 25%);
+}
+
+.img_esquerda{
+    grid-template-columns: minmax(400px, 25%)minmax(200px, 75%);
+}
+
+.img_direita:not(:nth-child(1)) h2,
+.img_esquerda:not(:nth-child(1)) h2{
+    margin-top: 3rem;
+}
+
+.img_direita img,
+.img_esquerda img{
+    display: block;
+    height: auto;
+    max-width: 100%;
+    transition: transform .3s linear;
+}
+
+.img_direita img:hover,
+.img_esquerda img:hover{
+    transform: translateY(-4rem);
+}
+
+.conteudo p{
+    font-weight: 400;
+    font-size: 2em;
+    margin-bottom: .6em;
+    text-indent: 2rem;
+}
+
+/*Estudios*/
+.slider{
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.slider ul li img{
+    width: 900px;
+}
+
+/*Generos*/
+.exemplos_genero li{
+    font-size: 1.5rem;
+    list-style: circle;
+    list-style-position: inside;
 }
