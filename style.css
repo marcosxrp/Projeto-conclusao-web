@@ -298,13 +298,20 @@ h4{
     margin-bottom: 1rem;
 }
 
-h5{
-    font-size: 1.5rem;
-}
-
 li{
     list-style: none;
 }
+
+
+.slider{
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.slider ul li img{
+    width: 900px;
+}
+
 
 footer{
     bottom: 0;
@@ -373,16 +380,6 @@ footer a:hover{
     text-indent: 2rem;
 }
 
-/*Estudios*/
-.slider{
-    max-width: 900px;
-    margin: 0 auto;
-}
-
-.slider ul li img{
-    width: 900px;
-}
-
 /*Generos*/
 .exemplos_genero li{
     font-size: 1.5rem;
@@ -394,8 +391,8 @@ footer a:hover{
 #top10{
     width: 100%;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
-    row-gap: 2rem;
+    grid-template-columns: repeat(auto-fit, minmax(650px, 1fr));
+    row-gap: 3rem;
     text-align: center;
 }
 
@@ -410,12 +407,12 @@ footer a:hover{
 
 #top10 li::before{
     content: '#' counter(top10);
-    font-size: 1.3rem;
+    font-size: 1.6rem;
 }
 
 #top10 li img{
     display: block;
-    max-width: 450px;
+    max-width: 650px;
     border-radius: 2rem;
     border: 1px solid aliceblue;
 }
